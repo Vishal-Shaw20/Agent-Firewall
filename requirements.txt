@@ -1,0 +1,16 @@
+# ── Proxy Server ──────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# ── Agent Framework ───────────────────────────────────────
+langchain>=0.3.0
+langchain-ollama>=0.2.0
+ollama>=0.6.2
+
+# ── Storage / Logging ─────────────────────────────────────
+redis>=5.0.0
+
+# ── Utilities ─────────────────────────────────────────────
+python-dotenv>=1.0.0
+httpx>=0.28.0
+pydantic>=2.0.0
