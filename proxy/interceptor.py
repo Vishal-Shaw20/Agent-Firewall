@@ -2,10 +2,9 @@ import json, uuid, time
 from redis import Redis
 from proxy.models import ToolResponseRequest, FirewallVerdict
 from proxy.decision_engine import make_decision
+from layers.l1_heuristic import run_l1_heuristic
 
 # ── Stub layer functions (replaced phase by phase) ─────────
-def run_l1_heuristic(content: str) -> dict:
-    return {"score": 0.0, "layer": "L1_heuristic", "matched": []}
 
 def run_l2_classifier(content: str) -> dict:
     return {"score": 0.0, "layer": "L2_classifier"}
