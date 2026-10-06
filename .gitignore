@@ -25,9 +25,6 @@ models/
 *.bin
 *.safetensors
 
-# ── Corpus data (may contain sensitive red-team content) ──
-corpus/
-
 # ── Logs and temp files ───────────────────────────────────
 *.log
 *.tmp
