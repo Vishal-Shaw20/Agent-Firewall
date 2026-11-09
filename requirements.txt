@@ -2,15 +2,32 @@
 fastapi>=0.115.0
 uvicorn>=0.30.0
 
-# ── Agent Framework ───────────────────────────────────────
+# ── Agent Framework (next round: FR1 / FR14) ──────────────
 langchain>=0.3.0
 langchain-ollama>=0.2.0
 ollama>=0.6.2
 
-# ── Storage / Logging ─────────────────────────────────────
+# ── Storage / Logging (falls back to logs/audit.jsonl) ────
 redis>=5.0.0
+
+# ── L2 classifier + L4 embeddings ─────────────────────────
+torch>=2.2.0
+transformers>=4.57.0
+datasets>=4.0.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
+sentence-transformers>=5.0.0
+
+# ── L3 concealment / render-diff ──────────────────────────
+beautifulsoup4>=4.12.0
+playwright>=1.45.0        # then: python -m playwright install chromium
+pytesseract>=0.3.10       # optional OCR path; needs the Tesseract binary
+pillow>=10.0.0
 
 # ── Utilities ─────────────────────────────────────────────
 python-dotenv>=1.0.0
 httpx>=0.28.0
+requests>=2.31.0
 pydantic>=2.0.0
+pyyaml>=6.0.0
+pytest>=8.0.0

@@ -1,0 +1,14 @@
+# Expected response profile for the web_fetch tool (page text / HTML).
+# Declarative per NFR6: onboarding a tool means adding a file like this,
+# not changing layers/l5_schema.py.
+tool: web_fetch
+format: text
+
+# Words mixing scripts (e.g. Latin + Cyrillic letters in one token) are a
+# homoglyph carrier signal. Whole words in another script are fine.
+max_mixed_script_tokens: 0
+
+# Long space-free strings above this Shannon entropy (bits/char) are treated
+# as opaque blobs and sent to the reconstruction probe.
+max_token_entropy: 4.5
+min_blob_length: 16

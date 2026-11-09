@@ -1,0 +1,180 @@
+{
+  "pipeline (all layers)": {
+    "rates": {
+      "implicit": 0.9090909090909091,
+      "explicit": 1.0,
+      "structural": 0.8,
+      "benign": 0.0
+    },
+    "hard_benign_fpr": 0.10714285714285714,
+    "mixes": {
+      "SRS real-world-calibrated (55/20/10/15)": {
+        "tpr": 0.9176470588235294,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9798115746971737
+      },
+      "resume-study injected split (77/8/0/15)": {
+        "tpr": 0.9176470588235294,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9798115746971735
+      },
+      "balanced (35/35/15/15)": {
+        "tpr": 0.9272727272727272,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9800169553106456
+      },
+      "structural-heavy (30/20/35/15)": {
+        "tpr": 0.8855614973262032,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9790954009882175
+      },
+      "benchmark-like explicit-heavy (5/70/10/15)": {
+        "tpr": 0.9711229946524065,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9809020409738031
+      }
+    },
+    "prevalence": {
+      "hard-benign look-alikes": {
+        "0.15": 0.6018186828327362,
+        "0.05": 0.3107127614169868,
+        "0.01": 0.0796237558788144,
+        "0.001": 0.008500402835024463
+      },
+      "benign HTML with hidden elements": {
+        "0.15": 0.227460510328068,
+        "0.05": 0.08072445019404917,
+        "0.01": 0.016573705179282867,
+        "0.001": 0.0016673346693386773
+      }
+    }
+  },
+  "L1 heuristic only": {
+    "rates": {
+      "implicit": 0.13636363636363635,
+      "explicit": 0.5,
+      "structural": 0.0,
+      "benign": 0.0
+    },
+    "hard_benign_fpr": 0.0,
+    "mixes": {
+      "SRS real-world-calibrated (55/20/10/15)": {
+        "tpr": 0.20588235294117643,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "resume-study injected split (77/8/0/15)": {
+        "tpr": 0.17058823529411765,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "balanced (35/35/15/15)": {
+        "tpr": 0.2620320855614973,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "structural-heavy (30/20/35/15)": {
+        "tpr": 0.1657754010695187,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "benchmark-like explicit-heavy (5/70/10/15)": {
+        "tpr": 0.4197860962566845,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      }
+    }
+  },
+  "L2 classifier only": {
+    "rates": {
+      "implicit": 0.9090909090909091,
+      "explicit": 1.0,
+      "structural": 0.0,
+      "benign": 0.0
+    },
+    "hard_benign_fpr": 0.10714285714285714,
+    "mixes": {
+      "SRS real-world-calibrated (55/20/10/15)": {
+        "tpr": 0.8235294117647057,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9775561097256859
+      },
+      "resume-study injected split (77/8/0/15)": {
+        "tpr": 0.9176470588235294,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9798115746971735
+      },
+      "balanced (35/35/15/15)": {
+        "tpr": 0.786096256684492,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9765124555160143
+      },
+      "structural-heavy (30/20/35/15)": {
+        "tpr": 0.5561497326203209,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9671205579541681
+      },
+      "benchmark-like explicit-heavy (5/70/10/15)": {
+        "tpr": 0.8770053475935828,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 0.9788957578341506
+      }
+    }
+  },
+  "pipeline without L2": {
+    "rates": {
+      "implicit": 0.13636363636363635,
+      "explicit": 0.625,
+      "structural": 0.8,
+      "benign": 0.0
+    },
+    "hard_benign_fpr": 0.0,
+    "mixes": {
+      "SRS real-world-calibrated (55/20/10/15)": {
+        "tpr": 0.32941176470588235,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "resume-study injected split (77/8/0/15)": {
+        "tpr": 0.18235294117647058,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "balanced (35/35/15/15)": {
+        "tpr": 0.45467914438502677,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "structural-heavy (30/20/35/15)": {
+        "tpr": 0.5245989304812834,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      },
+      "benchmark-like explicit-heavy (5/70/10/15)": {
+        "tpr": 0.6168449197860962,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "precision_hard": 1.0
+      }
+    }
+  }
+}

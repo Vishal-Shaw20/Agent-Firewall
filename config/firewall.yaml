@@ -1,0 +1,32 @@
+# Agent Firewall runtime configuration.
+
+decision:
+  block_threshold: 0.8
+  strip_threshold: 0.5
+  # On BLOCK, try to keep the legitimate part of the response: remove every
+  # flagged part and re-screen the remainder through all layers. Only if the
+  # remainder is a clean PASS is it returned (as STRIP, sanitized: true).
+  sanitize_blocks: true
+  # Weights for the aggregate score recorded in the audit log (NFR3).
+  # The verdict itself uses the any-layer-over-threshold rule.
+  weights:
+    L1: 1.0
+    L2: 1.0
+    L3: 1.0
+    L4: 1.0
+    L5: 1.0
+
+layers:
+  enabled: [L1, L2, L3, L4, L5]
+
+l3:
+  render_enabled: true
+  # NFR1: render-diff runs off the request path; if it exceeds this budget
+  # the verdict uses the rule-based score and is marked render_pending.
+  render_budget_s: 1.5
+  # A hidden block shorter than this many words is ignored (icons, labels).
+  min_hidden_words: 8
+
+l4:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  anchors_file: taint_anchors.yaml

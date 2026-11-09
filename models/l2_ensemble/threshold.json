@@ -1,0 +1,15 @@
+{
+  "strip": 0.7425,
+  "block": 0.995,
+  "val_tpr_at_strip": 0.9583333333333334,
+  "val_fpr_at_strip": 0.018518518518518517,
+  "val_tpr_at_block": 0.75,
+  "val_fpr_at_block": 0.0,
+  "n_val_pos": 24,
+  "n_val_neg": 54,
+  "members": [
+    "seed42",
+    "seed1",
+    "seed2"
+  ]
+}

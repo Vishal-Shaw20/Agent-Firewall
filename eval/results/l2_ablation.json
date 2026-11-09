@@ -1,0 +1,77 @@
+{
+  "ensemble": {
+    "implicit": {
+      "rate": 0.9090909090909091,
+      "mean_score": 0.7854954545454546,
+      "n": 22,
+      "auc_vs_benign": 1.0
+    },
+    "explicit": {
+      "rate": 1.0,
+      "mean_score": 0.7911,
+      "n": 8,
+      "auc_vs_benign": 1.0
+    },
+    "structural": {
+      "rate": 0.0,
+      "mean_score": 0.060525,
+      "n": 4,
+      "auc_vs_benign": 0.25
+    },
+    "benign": {
+      "rate": 0.0,
+      "mean_score": 0.049350000000000005,
+      "n": 6
+    }
+  },
+  "full": {
+    "implicit": {
+      "rate": 0.9545454545454546,
+      "mean_score": 0.8394863636363635,
+      "n": 22,
+      "auc_vs_benign": 0.9924242424242424
+    },
+    "explicit": {
+      "rate": 1.0,
+      "mean_score": 0.8779750000000001,
+      "n": 8,
+      "auc_vs_benign": 1.0
+    },
+    "structural": {
+      "rate": 0.0,
+      "mean_score": 0.03235,
+      "n": 4,
+      "auc_vs_benign": 0.20833333333333334
+    },
+    "benign": {
+      "rate": 0.0,
+      "mean_score": 0.05861666666666666,
+      "n": 6
+    }
+  },
+  "explicit_only": {
+    "implicit": {
+      "rate": 0.0,
+      "mean_score": 0.21370454545454545,
+      "n": 22,
+      "auc_vs_benign": 0.25757575757575757
+    },
+    "explicit": {
+      "rate": 1.0,
+      "mean_score": 0.9365375,
+      "n": 8,
+      "auc_vs_benign": 1.0
+    },
+    "structural": {
+      "rate": 0.0,
+      "mean_score": 0.119225,
+      "n": 4,
+      "auc_vs_benign": 0.25
+    },
+    "benign": {
+      "rate": 0.0,
+      "mean_score": 0.2195666666666667,
+      "n": 6
+    }
+  }
+}

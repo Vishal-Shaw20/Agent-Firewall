@@ -1,0 +1,18 @@
+# Generic JSON API profile, used when a tool has no stricter schema.
+# Field names are not restricted; the checks are on the type profile of
+# values (opaque blobs in string fields, numeric arrays that decode to text).
+tool: json_api
+format: json
+
+allow_undeclared_fields: true
+fields: {}
+
+max_depth: 4
+max_token_entropy: 4.5
+min_blob_length: 16
+max_mixed_script_tokens: 0
+
+# Fields allowed to carry opaque encoded values (checksums, ids, image data).
+# Values in these fields still go through the reconstruction probe, but a
+# non-text decode is not counted as a deviation.
+opaque_fields: [checksum, id, etag, hash, signature, thumbnail]

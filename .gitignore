@@ -29,3 +29,7 @@ models/
 *.log
 *.tmp
 .DS_Store
+
+# ── Audit log fallback and corpus backups ─────────────────
+logs/
+*.bak

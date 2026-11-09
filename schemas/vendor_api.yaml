@@ -1,0 +1,22 @@
+# Strict example schema for a vendor-record API. Demonstrates FR8 with
+# declared fields and types; any field not listed here is a deviation.
+tool: vendor_api
+format: json
+
+allow_undeclared_fields: false
+fields:
+  vendor_id:     string
+  name:          string
+  status:        string
+  rating:        string
+  certifications: list
+  annual_spend:  number
+  monthly_orders: list
+  last_audit:    string
+  notes:         string
+
+max_depth: 3
+max_token_entropy: 4.5
+min_blob_length: 16
+max_mixed_script_tokens: 0
+opaque_fields: [vendor_id]
